@@ -176,6 +176,7 @@ section a:hover {
     color: var(--color-text); }
 
 .section-card-link {
+  display: block;
   text-decoration: none;
   color: inherit;
 }
