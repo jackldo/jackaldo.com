@@ -119,13 +119,14 @@ section a:hover {
 }
 
 .project-card {
-  background-color: var(--color-card);
-  border: 1px solid rgba(255, 255, 255, 0.01);
+  background-color: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.08);
   padding: var(--spacing-md);
   border-radius: 8px;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-sm);
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
 }
 
 .project-card img {
@@ -144,14 +145,10 @@ section a:hover {
   line-height: 1.7;
 }
 
-.project-card a {
-  color: var(--color-accent);
-  text-decoration: none;
-  font-size: 0.875rem;
-}
-
-.project-card a:hover {
-  text-decoration: underline;
+.project-card-link:hover .project-card {
+  transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .project-hero img {
@@ -177,6 +174,38 @@ section a:hover {
 .project-links a:hover {
     background-color: var(--color-accent);
     color: var(--color-text); }
+
+.section-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.section-card-link section {
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 8px;
+  padding: var(--spacing-md);
+  transition: transform 0.2s ease, background-color 0.2s ease, border-color 0.2s ease;
+}
+
+.section-card-link:hover section {
+  transform: translateY(-4px);
+  background-color: rgba(255, 255, 255, 0.05);
+  border-color: rgba(255, 255, 255, 0.2);
+  text-decoration: none;
+}
+
+.section-card-link:hover {
+  text-decoration: none;
+}
+
+.project-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.project-card-link:hover {
+  text-decoration: none;
+}
 
 .about-content {
     display: flex;
